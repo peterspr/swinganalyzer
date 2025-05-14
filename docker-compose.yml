@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./web-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./web-app:/app
+    command: npm run dev
+
+  backend:
+    build:
+      context: ./fast-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./fast-api:/app
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
