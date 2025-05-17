@@ -1,0 +1,4 @@
+path: /Users/prestonpetersen/Personal_Projects/swinganalyzer/fast-api/Training/datasets/training_data
+train: images/train
+val: images/val
+names: ['club_head']

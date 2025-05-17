@@ -4,8 +4,8 @@ import os
 
 app = FastAPI()
 
-UPLOAD_DIR = "./uploads"
-PROCESSED_DIR = "./processed"
+UPLOAD_DIR = "../uploads"
+PROCESSED_DIR = "../processed"
 
 @app.post("/process-video")
 async def process_video(file_path: str):
